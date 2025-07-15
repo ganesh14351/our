@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ad Showcase</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .ads-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .ad-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .ad-card:hover {
+      transform: scale(1.03);
+    }
+    .ad-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #007bff;
+    }
+    .ad-description {
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Ad Showcase</h1>
+  <div class="ads-container">
+    <!-- 25 ad cards -->
+    <script>
+      for (let i = 1; i <= 25; i++) {
+        document.write(`
+          <div class="ad-card">
+            <div class="ad-title">Ad Title ${i}</div>
+            <div class="ad-description">
+              This is a placeholder for advertisement number ${i}. You can replace this with actual ad content or banners.
+            </div>
+          </div>
+        `);
+      }
+    </script>
+  </div>
+
+  <!-- Auto-refresh script -->
+  <script>
+    setTimeout(() => {
+      location.reload();
+    }, 15000); // 15 seconds
+  </script>
+</body>
+</html>
